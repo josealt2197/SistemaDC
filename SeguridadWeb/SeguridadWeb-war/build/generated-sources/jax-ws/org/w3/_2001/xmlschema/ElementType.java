@@ -41,8 +41,8 @@ import javax.xml.namespace.QName;
  *         &lt;/choice>
  *         &lt;group ref="{http://www.w3.org/2001/XMLSchema}identityConstraint" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.w3.org/2001/XMLSchema}occurs"/>
  *       &lt;attGroup ref="{http://www.w3.org/2001/XMLSchema}defRef"/>
+ *       &lt;attGroup ref="{http://www.w3.org/2001/XMLSchema}occurs"/>
  *       &lt;attribute name="type" type="{http://www.w3.org/2001/XMLSchema}QName" />
  *       &lt;attribute name="substitutionGroup" type="{http://www.w3.org/2001/XMLSchema}QName" />
  *       &lt;attribute name="default" type="{http://www.w3.org/2001/XMLSchema}string" />
@@ -77,9 +77,9 @@ public abstract class ElementType
     protected LocalComplexType complexType;
     protected LocalSimpleType simpleType;
     @XmlElementRefs({
-        @XmlElementRef(name = "key", namespace = "http://www.w3.org/2001/XMLSchema", type = JAXBElement.class, required = false),
         @XmlElementRef(name = "unique", namespace = "http://www.w3.org/2001/XMLSchema", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "keyref", namespace = "http://www.w3.org/2001/XMLSchema", type = Keyref.class, required = false)
+        @XmlElementRef(name = "keyref", namespace = "http://www.w3.org/2001/XMLSchema", type = Keyref.class, required = false),
+        @XmlElementRef(name = "key", namespace = "http://www.w3.org/2001/XMLSchema", type = JAXBElement.class, required = false)
     })
     protected List<Object> uniquesAndKeiesAndKeyreves;
     @XmlAttribute(name = "type")
@@ -102,18 +102,18 @@ public abstract class ElementType
     protected List<String> blocks;
     @XmlAttribute(name = "form")
     protected FormChoice form;
-    @XmlAttribute(name = "minOccurs")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger minOccurs;
-    @XmlAttribute(name = "maxOccurs")
-    @XmlSchemaType(name = "allNNI")
-    protected String maxOccurs;
     @XmlAttribute(name = "name")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String name;
     @XmlAttribute(name = "ref")
     protected QName ref;
+    @XmlAttribute(name = "minOccurs")
+    @XmlSchemaType(name = "nonNegativeInteger")
+    protected BigInteger minOccurs;
+    @XmlAttribute(name = "maxOccurs")
+    @XmlSchemaType(name = "allNNI")
+    protected String maxOccurs;
 
     /**
      * Gets the value of the complexType property.
@@ -182,8 +182,8 @@ public abstract class ElementType
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link JAXBElement }{@code <}{@link Keybase }{@code >}
-     * {@link JAXBElement }{@code <}{@link Keybase }{@code >}
      * {@link Keyref }
+     * {@link JAXBElement }{@code <}{@link Keybase }{@code >}
      * 
      * 
      */
@@ -429,6 +429,54 @@ public abstract class ElementType
     }
 
     /**
+     * Gets the value of the name property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Sets the value of the name property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setName(String value) {
+        this.name = value;
+    }
+
+    /**
+     * Gets the value of the ref property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link QName }
+     *     
+     */
+    public QName getRef() {
+        return ref;
+    }
+
+    /**
+     * Sets the value of the ref property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link QName }
+     *     
+     */
+    public void setRef(QName value) {
+        this.ref = value;
+    }
+
+    /**
      * Gets the value of the minOccurs property.
      * 
      * @return
@@ -482,54 +530,6 @@ public abstract class ElementType
      */
     public void setMaxOccurs(String value) {
         this.maxOccurs = value;
-    }
-
-    /**
-     * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setName(String value) {
-        this.name = value;
-    }
-
-    /**
-     * Gets the value of the ref property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link QName }
-     *     
-     */
-    public QName getRef() {
-        return ref;
-    }
-
-    /**
-     * Sets the value of the ref property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link QName }
-     *     
-     */
-    public void setRef(QName value) {
-        this.ref = value;
     }
 
 }
