@@ -1,0 +1,11 @@
+tableList{
+    width: 70%; 
+    margin: 0 auto; 
+    background-color: white; 
+    border: none;
+}
+
+tableListHeader{
+    background-color: white; 
+    border: none;
+}

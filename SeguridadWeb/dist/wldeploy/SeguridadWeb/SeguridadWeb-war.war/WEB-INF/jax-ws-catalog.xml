@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://eros:7015/WSLDAP/WS_LDAPService?wsdl" uri="wsdl/eros_7015/WSLDAP/WS_LDAPService.wsdl"/>
+    <system systemId="http://eros:7015/WSLDAP/WS_LDAPService?xsd=1" uri="wsdl/eros_7015/WSLDAP/WS_LDAPService.xsd_1.xsd"/>
+    <system systemId="http://wls:7015/WS_LDAPService?WSDL" uri="wsdl/wls_7015/WS_LDAPService.wsdl"/>
+    <system systemId="http://wls:7015/WS_LDAPService?xsd=1" uri="wsdl/wls_7015/WS_LDAPService.xsd_1.xsd"/>
+    <system systemId="https://gee.bccr.fi.cr/indicadoreseconomicos/WebServices/wsIndicadoresEconomicos.asmx?op=ObtenerIndicadoresEconomicos" uri="wsdl/gee.bccr.fi.cr/indicadoreseconomicos/WebServices/wsIndicadoresEconomicos.asmx.op_obtenerindicadoreseconomicos"/>
+    <system systemId="https://gee.bccr.fi.cr/indicadoreseconomicos/WebServices/wsIndicadoresEconomicos.asmx" uri="wsdl/gee.bccr.fi.cr/indicadoreseconomicos/WebServices/wsIndicadoresEconomicos.asmx"/>
+    <system systemId="http://indicadoreseconomicos.bccr.fi.cr/indicadoreseconomicos/WebServices/wsIndicadoresEconomicos.asmx?wsdl" uri="wsdl/indicadoreseconomicos.bccr.fi.cr/indicadoreseconomicos/WebServices/wsIndicadoresEconomicos.asmx.wsdl"/>
+</catalog>

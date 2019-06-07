@@ -1,0 +1,88 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23/06/2014, 03:29:39 PM
+    Author     : jsalazar
+*/
+
+/*#nn-alert{
+  margin:auto;
+  margin-top:20px;
+  background:rgba(51, 59, 70, 0.5);
+  border:1px solid #111;
+  border-radius:3px;
+  box-shadow:inset 0px 24px 0px rgba(255,255,255,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.4),
+    inset 0 10px 10px rgba(255,255,255,0.2),
+    inset 0 -5px 10px rgba(0,0,0,0.2),
+    0 3px 3px rgba(0,0,0,0.3);
+  width:250px;
+  height:50px;
+  padding:5px 10px;
+  color:white;
+  font-size:12px;
+  text-shadow:0 1px 1px rgba(0,0,0,0.8);
+  transition:all .5s ease;
+  backface-visibility:hidden;
+  display: none;
+}
+#nn-alert .fa{
+  font-size:2em;
+  width:1em;
+  float:left;
+  margin:7px 10px 0 0px;
+  text-align:center;
+}
+
+#nn-alert p{
+  margin:6px 0;
+}
+
+#nn-alert:hover{
+  opacity:0.5;
+}*/
+
+.message li
+{
+		background-size: 40px 40px;
+		background-image: linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+							transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+							transparent 75%, transparent);										
+		box-shadow: inset 0 -1px 0 rgba(255,255,255,.4);
+		width: 250px;
+                margin: -2px;
+		border: 1px solid;
+		color: #fff;
+		padding: 5px;
+		text-shadow: 0 1px 0 rgba(0,0,0,.5);
+		animation: animate-bg 5s linear infinite;
+                background-color: #61b832;
+		border-color: #55a12c;
+                text-align: center;
+                border-radius:5px;
+                list-style: none;
+}
+               
+.error li
+{
+		background-size: 40px 40px;
+		background-image: linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+							transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+							transparent 75%, transparent);										
+		box-shadow: inset 0 -1px 0 rgba(255,255,255,.4);
+		width: 250px;
+                margin: -2px;
+		border: 1px solid;
+		color: #fff;
+		padding: 5px;
+		text-shadow: 0 1px 0 rgba(0,0,0,.5);
+		animation: animate-bg 5s linear infinite;
+		background-color: #de4343;
+		border-color: #c43d3d;
+                text-align: center;
+                border-radius:5px;
+                list-style: none;
+}                
